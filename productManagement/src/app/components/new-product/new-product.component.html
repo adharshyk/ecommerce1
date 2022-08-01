@@ -1,0 +1,124 @@
+<h3 style="text-align: center;">Add Product</h3><hr><br>
+
+<form style=" margin-left:500px; margin-top: 10px; " #SPForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Product ID</label>
+        <div class="col-sm-10">
+            <input type="number" name="prodid" [(ngModel)]="product.id">
+
+        </div>
+    </div><br>
+
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">SKU</label>
+        <div class="col-sm-10">
+            <input type="text" name="sku" [(ngModel)]="product.sku">
+
+        </div>
+    </div><br>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Product Name</label>
+        <div class="col-sm-10">
+            <input type="text" name="name" [(ngModel)]="product.name">
+
+        </div>
+    </div><br>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" name="description" [(ngModel)]="product.description">
+
+        </div>
+    </div><br>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Unit Price</label>
+        <div class="col-sm-10">
+            <input type="number" name="unitprice" [(ngModel)]="product.unitPrice">
+
+        </div>
+    </div><br>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Image Url</label>
+        <div class="col-sm-10">
+            <input type="text" name="imageurl" [(ngModel)]="product.imageUrl">
+
+        </div>
+    </div><br>
+
+
+    <!-- <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Active</label>
+        <div class="col-sm-10">
+            <input type="number" name="active">
+
+        </div>
+    </div> -->
+    <div class="dropdown" name="act">
+        <label class="col-sm-2 col-form-label">Active</label>&nbsp;
+        <select name="options" id="act" [(ngModel)]="product.active">
+            <option value="1">1</option>
+            <option value="0">0</option>
+        </select>
+    </div><br>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Units Stock</label>
+        <div class="col-sm-10">
+            <input type="number" name="unitsinstock">
+
+        </div>
+    </div><br>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Created Date</label>
+        <div class="col-sm-10">
+            <input type="date" name="datecreated" [(ngModel)]="product.dateCreated">
+
+        </div>
+    </div><br>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Last Updated</label>
+        <div class="col-sm-10">
+            <input type="date" name="lastupdated" [(ngModel)]="product.lastUpdated">
+
+        </div>
+    </div><br>
+
+    <!-- <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Category ID</label>
+        <div class="col-sm-10">
+            <app-cat-list></app-cat-list>
+
+        </div>
+    </div><br> -->
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Category ID</label>
+        <div class="col-sm-10">
+            <input type="number" name="categoryid" [(ngModel)]="product.categoryId">
+
+        </div>
+    </div><br>
+
+
+
+
+
+    <div class="form-group row">
+        <div class="col-sm-2">
+            <button type="submit">Add</button><br> <br>
+            <button type="reset">Reset</button>
+        </div>
+    
+    </div><br>
+
+    <a routerLink="/">Home</a>
+
+</form>

@@ -1,0 +1,87 @@
+<!-- <div class="container">
+    <div class="item"><img src="https://m.media-amazon.com/images/I/61jLiCovxVL._SL1500_.jpg"></div>
+    <div class="item"><img src="https://m.media-amazon.com/images/I/81oz+NZ4QLL._SL1500_.jpg"></div>
+    <div class="item"><img src="https://m.media-amazon.com/images/I/719elVA3FvL._SL1500_.jpg"></div>
+</div> -->
+
+
+<h3 style="text-align: center;">Product Details</h3><hr><br>
+
+<!-- <app-cat-list></app-cat-list> -->
+
+<!-- <button  style="margin-left: 205px;" routerLink="/merchant" >New Product</button> -->
+
+
+
+<!-- <table class="table table-striped table-bordered  table-hover"
+    style="width: 900px; margin-left:200px; margin-top: 20px; border: 1px solid black;">
+
+    <tr style=" color: rgb(1, 6, 10);">
+        <th scope="col">Product ID</th>
+        <th scope="col">SKU</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Image</th>
+        <th scope="col">Active</th>
+        <th scope="col">Unit Stock</th>
+        <th scope="col">Craeted Date</th>
+        <th scope="col">Last updated</th>
+        <th scope="col">Category ID</th>
+
+    </tr>
+
+    <tr *ngFor="let prod of products">
+        <td>{{prod.id}}</td> 
+        <td>{{prod.sku}}</td>
+        <td>{{prod.name}}</td>
+        <td>{{prod.description}}</td>
+        <td>{{prod.unitPrice | currency:'INR'}}</td>
+        <td><img [src]="prod.imageUrl" style="width: 100px; height: 100px;" alt=""></td>
+        <td>{{prod.active}}</td>
+        <td>{{prod.unitInStock}}</td>
+        <td>{{prod.dateCreated}}</td>
+        <td>{{prod.lastUpdated}}</td>
+        <td>{{prod.categoryId}}</td>
+    </tr>
+
+
+
+
+</table> -->
+
+
+<div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let prod of products">
+        <div class="card" style="width: 18rem;">
+            <img style="height: 300px; width:250px; "  [src]="prod.imageUrl" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title">{{prod.name}}</h5>
+              <p class="card-text">{{prod.description}}</p><h2>{{prod.unitPrice}} Rs</h2>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-inline="true">Add to cart</a>
+            </div>
+          </div>
+      </div>
+    </div> 
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngFor="let prod of products">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{prod.name}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img style="height: 300px; width:250px; "  [src]="prod.imageUrl" class="card-img-top" alt="..." >
+            <p>{{prod.description}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div> <a routerLink="/">Home</a>

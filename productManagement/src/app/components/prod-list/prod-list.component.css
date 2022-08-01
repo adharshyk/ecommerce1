@@ -1,0 +1,25 @@
+table, th, td {
+    border: 1px solid;
+  }
+
+
+  app-prod-list{
+    width: 200px; 
+    margin-left: 900px; 
+    position: absolute
+  } 
+
+  /* .container {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr 1fr 1fr;
+    grid-template-rows: 2fr 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 13px;
+    justify-items: stretch;
+    align-items: center;
+ }
+ 
+  img{
+    height: 200px;
+    width: 200px;
+  } */
